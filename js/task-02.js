@@ -7,10 +7,10 @@ const ingredients = [
   "Condiments",
 ];
 const ingredientsList = document.querySelector("#ingredients");
-const list = document.createElement("li");
-const markup = ingredients.map((ingredient) => {
-  return `<li class="item">${ingredient}</li>`;
+
+ingredients.forEach((ingredient) => {
+  const ingredientsListItem = document.createElement("li");
+  ingredientsListItem.textContent = ingredient;
+  ingredientsListItem.classList.add("item");
+  ingredientsList.append(ingredientsListItem);
 });
-const newMarkup = markup.join("");
-list.innerHTML = newMarkup;
-ingredientsList.append(list);

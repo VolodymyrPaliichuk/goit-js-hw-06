@@ -8,10 +8,9 @@ loginForm.addEventListener("submit", (event) => {
     email: correctEmailValue,
     password: correctPasswordValue,
   };
-  console.log(userData);
-
   if (correctEmailValue === "" || correctPasswordValue === "") {
-    alert("Усі поля форми повинні бути заповнені");
+    return alert("Усі поля форми повинні бути заповнені");
   }
+  console.log(userData);
   loginForm.reset();
 });
