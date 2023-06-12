@@ -4,20 +4,20 @@ const valueElem = document.querySelector("#value");
 
 const counterValue = {
   value: 0,
-  decrament(value) {
+  decrement(value) {
     this.value -= 1;
   },
-  incrament(value) {
+  increment(value) {
     this.value += 1;
   },
 };
 
-buttonDecrement.addEventListener("click", () => {
-  counterValue.decrament();
+buttonDecrement.addEventListener("click", (e) => {
+  counterValue.decrement();
   valueElem.textContent = counterValue.value;
 });
 
-buttonIncrement.addEventListener("click", () => {
-  counterValue.incrament();
+buttonIncrement.addEventListener("click", (e) => {
+  counterValue.increment();
   valueElem.textContent = counterValue.value;
 });

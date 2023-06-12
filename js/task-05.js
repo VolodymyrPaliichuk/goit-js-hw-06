@@ -1,10 +1,10 @@
 const input = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const userName = document.querySelector("#name-output");
 
-input.addEventListener("input", (event) => {
-  if (event.currentTarget.value === "") {
-    output.innerHTML = "Anonymous";
+input.addEventListener("input", (e) => {
+  if (e.currentTarget.value === "") {
+    userName.innerHTML = "Anonymous";
   } else {
-    output.innerHTML = event.currentTarget.value;
+    userName.innerHTML = e.currentTarget.value;
   }
 });

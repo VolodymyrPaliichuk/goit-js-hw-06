@@ -1,15 +1,15 @@
-const loginForm = document.querySelector("form");
+const loginForm = document.querySelector(".login-form");
 
-loginForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const correctEmailValue = loginForm.elements.email.value;
-  const correctPasswordValue = loginForm.elements.password.value;
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const currentEmailValue = loginForm.elements.email.value;
+  const currentPasswordValue = loginForm.elements.password.value;
   const userData = {
-    email: correctEmailValue,
-    password: correctPasswordValue,
+    email: currentEmailValue,
+    password: currentPasswordValue,
   };
-  if (correctEmailValue === "" || correctPasswordValue === "") {
-    return alert("Усі поля форми повинні бути заповнені");
+  if (currentEmailValue === "" || currentPasswordValue === "") {
+    return alert("Усі поля повинні бути заповнені");
   }
   console.log(userData);
   loginForm.reset();

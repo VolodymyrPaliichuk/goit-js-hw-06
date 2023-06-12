@@ -1,5 +1,7 @@
-const fontSizeControl = document.querySelector("#font-size-control");
+const input = document.querySelector("#font-size-control");
 const text = document.querySelector("#text");
-fontSizeControl.addEventListener("input", (event) => {
-  text.style.fontSize = `${event.target.value}px`;
+input.addEventListener("input", (e) => {
+  text.style.fontSize = `${e.currentTarget.value}px`;
 });
+
+const loginForm = document.querySelector("form");
